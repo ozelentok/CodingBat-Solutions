@@ -311,7 +311,7 @@ public int strDist(String str, String sub)
 {
 	int stLen = str.length();
 	int sbLen = sub.length();
-	if(str.length() < sbLen)
+	if(stLen < sbLen)
 		return 0;
 	if(str.substring(0, sbLen).equals(sub))
 	{

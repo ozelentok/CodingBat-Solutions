@@ -257,6 +257,24 @@ public int countHi2(String str)
 	return countHi2(str.substring(2));
 }
 
+// the Above Problem can also be done using string tools provided by java API
+public int countHi2(String str) {
+   
+   if(str.length() <= 3){
+      if(str.contains("xhi"))
+         return 0;
+      if(str.contains("hi"))
+         return 1;   
+      return 0;
+   }
+   if(str.startsWith("xhi"))
+      return countHi2(str.substring(3));
+   if(str.startsWith("hi"))
+      return 1+countHi2(str.substring(2));
+   
+   return countHi2(str.substring(1));
+}
+
 // Given a string that contains a single pair of parenthesis, compute recursively a new string made of only of the parenthesis and their contents, so "xyz(abc)123" yields "(abc)". 
 public String parenBit(String str)
 {

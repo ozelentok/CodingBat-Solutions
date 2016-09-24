@@ -123,6 +123,19 @@ public boolean double23(int[] nums)
 	}
 	return false;
 }
+// Another solution
+/**
+ * @author KingRayhan<rayhan095@gmail.com>
+ */
+public boolean double23(int[] nums) {
+  int Count2 = 0 , Count3 = 0;
+  for(int i = 0 ; i < nums.length ; i++){
+	  if(nums[i] == 2 ) Count2++;
+	  if(nums[i] == 3) Count3++;
+  }
+  return (Count2 == 2 || Count3 == 2);
+}
+
 // Given an int array length 3, if there is a 2 in the array immediately followed by a 3,
 // set the 3 element to 0. Return the changed array.
 public int[] fix23(int[] nums)
